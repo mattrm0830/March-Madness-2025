@@ -3,6 +3,7 @@ import pandas as pd
 import xgboost as xgb
 from sklearn.metrics import log_loss, accuracy_score, roc_auc_score
 import optuna
+import matplotlib.pyplot as plt
 
 
 
@@ -190,7 +191,7 @@ def main():
     print(f"Best model metrics - Log Loss: {cv_results[best_idx]['log_loss']:.4f}, Accuracy: {cv_results[best_idx]['accuracy']:.4f}, AUC: {cv_results[best_idx]['auc']:.4f}")
     
     # Feature importance visualization
-    import matplotlib.pyplot as plt
+  
     
     plt.figure(figsize=(10, 6))
     feature_importance = cv_results[best_idx]['feature_importance']

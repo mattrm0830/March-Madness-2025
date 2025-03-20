@@ -1,5 +1,5 @@
 # Data files
-*.csv
+
 *.xlsx
 *.xls
 data/*.csv

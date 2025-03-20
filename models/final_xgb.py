@@ -15,7 +15,7 @@ import pandas as pd
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import log_loss, accuracy_score, roc_auc_score
-
+import matplotlib.pyplot as plt
 
 
 
@@ -168,8 +168,7 @@ def main():
         
     print(f"Saved predictions to ../data/march_madness_predictions.csv")
     
-    # Feature importance visualization
-    import matplotlib.pyplot as plt
+ 
     
     plt.figure(figsize=(10, 6))
     feature_importance = final_model.feature_importances_
